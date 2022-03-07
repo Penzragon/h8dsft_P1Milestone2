@@ -6,8 +6,19 @@ Milestones ini dibuat guna mengevaluasi pembelajaran pada Hacktiv8 Data Science 
 
 By [Rifky Aliffa](https://github.com/Penzragon)
 
-![Image](https://cdn.wallpapersafari.com/10/74/8Y5Xeb.png)
+![Image](https://www.bengkulunews.co.id/wp-content/uploads/2022/01/Do-I-need-insurance-1.jpg)
 
 ## Dataset
 
-Pada project ini dataset yang digunakan adalah dataset tentang penjualan video games dari tahun 1980 hingga 2020. Dataset ini berisi 16598 baris dengan 11 kolom yang diantaranya adalah Rank, Name, Platform, Year, Genre, dan masih banyak lagi. Dataset dapat dilihat di [Kaggle](https://www.kaggle.com/gregorut/videogamesales).
+Pada project ini dataset yang digunakan adalah dataset tentang data klien yang memiliki asurasi pada sebuah perusahaan asuransi. Dataset ini berisi 1338 baris dengan 7 kolom yang diantaranya adalah age, sex, bmi, children, smoker, region, dan charges. Dataset dapat dilihat di [Kaggle](https://www.kaggle.com/teertha/ushealthinsurancedataset).
+
+Keterangan dari kolom pada dataset ini adalah:
+| Feature | Description |
+|---|---|
+| age | Age of primary beneficiary |
+| sex | Insurance contractor gender, female / male |
+| bmi | Body mass index, providing an understanding of body, weights that are relatively high or low relative to height, objective index of body weight (kg / m ^ 2) using the ratio of height to weight, ideally 18.5 to 24.9. |
+| children | Number of children covered by health insurance / Number of dependents |
+| smoker | Smoker / Non - smoker |
+| region | The beneficiary's residential area in the US, northeast, southeast, southwest, northwest. |
+| charges | Individual medical costs billed by health insurance. |
