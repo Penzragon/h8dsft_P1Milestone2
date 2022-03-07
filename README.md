@@ -22,3 +22,5 @@ Keterangan dari kolom pada dataset ini adalah:
 | smoker | Smoker / Non - smoker |
 | region | The beneficiary's residential area in the US, northeast, southeast, southwest, northwest. |
 | charges | Individual medical costs billed by health insurance. |
+
+## Objectives
