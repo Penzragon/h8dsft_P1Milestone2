@@ -50,7 +50,7 @@ def app():
 
     if predict:
         with st.expander("See your prediction result 👀"):
-            URL = "http://127.0.0.1:5000/predict"
+            URL = "https://backend-insurance-prediction.herokuapp.com/predict"
             r = requests.post(URL, json=data)
             res = r.json()
             if res["code"] == 200:
