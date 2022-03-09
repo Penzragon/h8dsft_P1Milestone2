@@ -24,3 +24,8 @@ Keterangan dari kolom pada dataset ini adalah:
 | charges | Individual medical costs billed by health insurance. |
 
 ## Objectives
+
+Tujuan dari project ini adalah:
+
+- Membuat model machine learning yang dapat memprediksi biaya asuransi dari seorang klien
+- Melakukan tuning pada model untuk mendapatkan score tertinggi
