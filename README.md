@@ -8,6 +8,10 @@ By [Rifky Aliffa](https://github.com/Penzragon)
 
 ![Image](https://www.bengkulunews.co.id/wp-content/uploads/2022/01/Do-I-need-insurance-1.jpg)
 
+## Dashboard
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://rifkyaliffa-prediction.herokuapp.com/)
+
 ## Dataset
 
 Pada project ini dataset yang digunakan adalah dataset tentang data klien yang memiliki asurasi pada sebuah perusahaan asuransi. Dataset ini berisi 1338 baris dengan 7 kolom yang diantaranya adalah age, sex, bmi, children, smoker, region, dan charges. Dataset dapat dilihat di [Kaggle](https://www.kaggle.com/teertha/ushealthinsurancedataset).
