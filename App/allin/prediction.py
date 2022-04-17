@@ -55,26 +55,23 @@ def app():
 
     if predict:
         with st.expander("See your prediction result 👀"):
-            URL = "https://backend-insurance-prediction.herokuapp.com/predict"
-            r = requests.post(URL, json=data)
-            res = r.json()
-            if res["code"] == 200:
-                name_ = name if name else "There"
-                hi = f"<h1 style='text-align: center;'>Hi, {name_.title()}! 👋</h1>"
-                charges = f"<h2 style='text-align: center;'>Your insurance charges are going to be: <br> <span style='color: #519259'>${res['prediction']:,.0f}</span></h2>"
-                st.markdown(hi, unsafe_allow_html=True)
-                st.markdown(charges, unsafe_allow_html=True)
-                if smoker.lower() == "yes":
-                    quote = f'<i><p style="text-align: center;">{random.choice(quotes)}</p></i>'
-                    st.markdown(
-                        '<br><p style="text-align: center;">🚭Try to stop smoking to reduce you insurance charges🚭</p>',
-                        unsafe_allow_html=True,
-                    )
-                    st.markdown(quote, unsafe_allow_html=True)
-                else:
-                    quote = f'<br><i><p style="text-align: center;">{random.choice(quotes2)}</p></i>'
-                    st.markdown(quote, unsafe_allow_html=True)
-                st.markdown("<br>", unsafe_allow_html=True)
+            df = pd.DataFrame([data])
+            prediction = model.predict(df)[0]
+            name_ = name if name else "There"
+            hi = f"<h1 style='text-align: center;'>Hi, {name_.title()}! 👋</h1>"
+            charges = f"<h2 style='text-align: center;'>Your insurance charges are going to be: <br> <span style='color: #519259'>${prediction:,.0f}</span></h2>"
+            st.markdown(hi, unsafe_allow_html=True)
+            st.markdown(charges, unsafe_allow_html=True)
+            if smoker.lower() == "yes":
+                quote = (
+                    f'<i><p style="text-align: center;">{random.choice(quotes)}</p></i>'
+                )
+                st.markdown(
+                    '<br><p style="text-align: center;">🚭Try to stop smoking to reduce you insurance charges🚭</p>',
+                    unsafe_allow_html=True,
+                )
+                st.markdown(quote, unsafe_allow_html=True)
             else:
-                st.write("Prediction failed")
-                st.write(res["error"])
+                quote = f'<br><i><p style="text-align: center;">{random.choice(quotes2)}</p></i>'
+                st.markdown(quote, unsafe_allow_html=True)
+            st.markdown("<br>", unsafe_allow_html=True)
