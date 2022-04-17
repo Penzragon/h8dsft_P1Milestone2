@@ -1,6 +1,11 @@
 import streamlit as st
+import pickle
+import pandas as pd
 import requests
 import random
+
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
 
 
 def app():
