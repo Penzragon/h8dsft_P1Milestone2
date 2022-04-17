@@ -1,3 +1,7 @@
 streamlit
 requests
 random
+requests
+pandas
+scikit-learn
+daal4py
